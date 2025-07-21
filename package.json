@@ -1,0 +1,45 @@
+{
+	"name": "rizoom",
+	"version": "1.0.0",
+	"description": "A lightweight and fast JavaScript library for interactive image zoom with cursor tracking, drag support, and gallery navigation.",
+	"keywords": [
+		"rizoom",
+		"zoom",
+		"lightbox",
+		"image",
+		"gallery"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dexad/rizoom"
+	},
+	"license": "MIT",
+	"author": "Dexad",
+	"scripts": {
+		"build": "rollup -c --environment BUILD:production",
+		"dev": "rollup -c --environment BUILD:development -w"
+	},
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^28.0.3",
+		"@rollup/plugin-node-resolve": "^16.0.1",
+		"@rollup/plugin-terser": "^0.4.4",
+		"@vercel/style-guide": "^6.0.0",
+		"esbuild": "^0.25.2",
+		"eslint": "^8.57.0",
+		"eslint-plugin-prettier": "^5.2.6",
+		"eslint-plugin-simple-import-sort": "^12.1.1",
+		"postcss": "^8.5.3",
+		"postcss-import": "^16.1.0",
+		"postcss-nested": "^7.0.2",
+		"postcss-preset-env": "^10.1.5",
+		"prettier": "^3.5.3",
+		"rollup": "^4.39.0",
+		"rollup-plugin-copy": "^3.5.0",
+		"rollup-plugin-esbuild": "^6.2.1",
+		"rollup-plugin-livereload": "^2.0.5",
+		"rollup-plugin-postcss": "^4.0.2",
+		"stylelint": "^16.18.0",
+		"stylelint-config-standard": "^38.0.0",
+		"stylelint-order": "^7.0.0"
+	}
+}
