@@ -1,12 +1,22 @@
 :root {
 	--rizoom--z-index: 2;
+	--rizoom--transition-duration: .25s;
+
+	/* Overlay. */
+	--rizoom--overlay--background-color: white;
+
+	/* Button. */
+	--rizoom--button--width: 40px;
+	--rizoom--button--height: 40px;
+	--rizoom--button--offset: 0;
+	--rizoom--button--background-color: black;
 }
 
 /* Main. */
 .rizoom {
 	display: block;
 	cursor: zoom-in;
-	transition: scale .25s ease, translate .25s ease;
+	transition: scale var(--rizoom--transition-duration) ease, translate var(--rizoom--transition-duration) ease;
 }
 
 /* Body overflow. */
@@ -39,10 +49,9 @@
 	width: 100%;
 	height: 100%;
 	pointer-events: none;
-	background-color: var(--color-background);
+	background-color: var(--rizoom--overlay--background-color);
 	opacity: 0;
 	visibility: hidden;
-	transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
 }
 
 .rizoom-overlay-show {
@@ -56,24 +65,21 @@
 	position: fixed;
 	top: 50%;
 	z-index: calc(var(--rizoom--z-index) + 1);
-	width: 40px;
-	height: 40px;
-	margin-top: -20px;
-	background-color: var(--color-background-300);
-	opacity: 0;
+	width: var(--rizoom--button--width);
+	height: var(--rizoom--button--height);
+	margin-top: calc(var(--rizoom--button--height) * -0.5);
+	background-color: var(--rizoom--button--background-color);
 	visibility: hidden;
-	transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
 }
 
 .rizoom-button-show {
-	opacity: 1;
 	visibility: visible;
 }
 
 .rizoom-button-prev {
-	left: 0;
+	left: var(--rizoom--button--offset);
 }
 
 .rizoom-button-next {
-	right: 0;
+	right: var(--rizoom--button--offset);
 }
