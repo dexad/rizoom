@@ -14,12 +14,14 @@ export default {
 	input: 'js/rizoom.js',
 	output: [
 		{
-			file: 'dist/rizoom.esm.js',
-			format: 'esm',
+			file: 'dist/rizoom.umd.min.js',
+			format: 'umd',
+			name: 'Rizoom',
+			plugins: [terser()],
 		},
 		{
 			file: 'dist/rizoom.min.js',
-			format: 'umd',
+			format: 'esm',
 			name: 'Rizoom',
 			plugins: [terser()],
 		},

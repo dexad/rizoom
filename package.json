@@ -15,6 +15,15 @@
 	},
 	"license": "MIT",
 	"author": "Dexad",
+	"type": "module",
+	"main": "dist/rizoom.min.js",
+	"module": "dist/rizoom.min.js",
+	"browser": "dist/rizoom.umd.js",
+	"files": [
+		"dist/",
+		"js/",
+		"css/"
+	],
 	"scripts": {
 		"build": "rollup -c --environment BUILD:production",
 		"dev": "rollup -c --environment BUILD:development -w"
